@@ -1,0 +1,12 @@
+<div class="my-3">
+    <div [ngClass]="{'strike': !todo.active}">
+      <h5>{{todo.title}}</h5>
+    </div>
+    <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+    <div class="form-check form-group my-1">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click)="onCheckboxClick(todo)"  [checked]="!todo.active">
+      <label class="form-check-label" for="flexCheckDefault{{i}}">Done</label>
+    </div>
+    <button class="btn btn-danger btn-sm my-2" (click)="Delete(todo)"> Delete </button>
+  </div>
+  
